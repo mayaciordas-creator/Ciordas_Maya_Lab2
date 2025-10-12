@@ -19,7 +19,7 @@ namespace Ciordas_Maya_Lab2.Pages
             _context = context;
         }
 
-        public IList<Authors> Author { get;set; } = default!;
+        public IList<Author> Author { get;set; } = default!;
 
         public async Task OnGetAsync()
         {

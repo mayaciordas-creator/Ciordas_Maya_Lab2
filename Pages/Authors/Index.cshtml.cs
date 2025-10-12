@@ -8,24 +8,22 @@ using Microsoft.EntityFrameworkCore;
 using Ciordas_Maya_Lab2.Data;
 using Ciordas_Maya_Lab2.Models;
 
-namespace Ciordas_Maya_Lab2.Pages.Author
+namespace Ciordas_Maya_Lab2.Pages.Authors
 {
     public class IndexModel : PageModel
     {
         private readonly Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context _context;
-       
-        
 
         public IndexModel(Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context context)
         {
             _context = context;
         }
 
-        public IList<Author> Authors { get;set; } = default!;
+        public IList<Author> Author { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Author = await _context.Authors.ToListAsync();
+            Author = await _context.Author.ToListAsync();
         }
     }
 }

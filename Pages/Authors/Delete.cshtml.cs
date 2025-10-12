@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Ciordas_Maya_Lab2.Data;
 using Ciordas_Maya_Lab2.Models;
 
-namespace Ciordas_Maya_Lab2.Models
+namespace Ciordas_Maya_Lab2.Pages.Authors
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace Ciordas_Maya_Lab2.Models
         }
 
         [BindProperty]
-        public Authors Author { get; set; } = default!;
+        public Author Author { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

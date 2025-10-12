@@ -18,8 +18,7 @@ namespace Ciordas_Maya_Lab2.Pages
         {
             _context = context;
         }
-
-        public Authors Author { get; set; } = default!;
+        public Author Author { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

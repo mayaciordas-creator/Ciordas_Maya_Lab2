@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Ciordas_Maya_Lab2.Data;
 using Ciordas_Maya_Lab2.Models;
 
-namespace Ciordas_Maya_Pages.Authors
+namespace Ciordas_Maya_Lab2.Pages.Authors
 {
     public class CreateModel : PageModel
     {
@@ -25,13 +25,9 @@ namespace Ciordas_Maya_Pages.Authors
         }
 
         [BindProperty]
-        public Authors Author { get; set; } = default!;
+        public Author Author { get; set; } = default!;
 
-        public CreateModel(Authors author)
-        {
-            Author = author;
-        }
-
+        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

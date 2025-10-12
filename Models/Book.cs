@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Policy;
 
 namespace Ciordas_Maya_Lab2.Models
 {
@@ -12,6 +11,8 @@ namespace Ciordas_Maya_Lab2.Models
         [Display(Name = "Author")]
         public int AuthorID { get; set; }
         public Author? Author { get; set; }
+
+        [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
