@@ -12,12 +12,12 @@ namespace Lese_Ioana_Lab2.Models
 
         [Display(Name = "Book Title")]
         public string Title { get; set; }
+
         //public string Author { get; set; }
 
         [Display(Name = "Author")]
+        
         public int? AuthorID { get; set; }
-
-        [ForeignKey("AuthorID")]
         public Author? Author { get; set; }
 
         [Column(TypeName = "decimal(6,2)")]

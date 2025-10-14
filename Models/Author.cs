@@ -18,6 +18,6 @@ namespace Lese_Ioana_Lab2.Models
         [NotMapped]
         public string FullName => $"{FirstName} {LastName}";
 
-        public ICollection<Book> Books { get; set; }
+        public ICollection<Book>? Books { get; set; }
     }
 }
