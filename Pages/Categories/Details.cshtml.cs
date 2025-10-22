@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Lese_Ioana_Lab2.Data;
 using Lese_Ioana_Lab2.Models;
 
-namespace Lese_Ioana_Lab2.Pages.Books
+namespace Lese_Ioana_Lab2.Pages.Categories
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace Lese_Ioana_Lab2.Pages.Books
             _context = context;
         }
 
-        public Book Book { get; set; } = default!;
+        public Category Category { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,19 +28,16 @@ namespace Lese_Ioana_Lab2.Pages.Books
                 return NotFound();
             }
 
-            Book = await _context.Book
-         .Include(b => b.Author)
-         .Include(b => b.Publisher)
-         .Include(b => b.BookCategories)
-             .ThenInclude(bc => bc.Category)
-         .AsNoTracking()
-         .FirstOrDefaultAsync(m => m.ID == id);
+            var category = await _context.Category.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Book == null)
+            if (category is not null)
             {
-                return NotFound();
+                Category = category;
+
+                return Page();
             }
-            return Page();
+
+            return NotFound();
         }
     }
 }
