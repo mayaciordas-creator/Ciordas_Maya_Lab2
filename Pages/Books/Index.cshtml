@@ -27,31 +27,31 @@
         <tr>
             <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.TitleSort">
-                @Html.DisplayNameFor(model => model.Book[0].Title)
+                    @Html.DisplayNameFor(model => model.BookD.Books.FirstOrDefault().Title)
                 </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].Price)
+                @Html.DisplayNameFor(model => model.BookD.Books.FirstOrDefault().Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].PublishingDate)
+                @Html.DisplayNameFor(model => model.BookD.Books.FirstOrDefault().PublishingDate)
             </th>
             <th colspan="2">
                 <a asp-page="./Index" asp-route-sortOrder="@Model.AuthorSort">
-                @Html.DisplayNameFor(model => model.Book[0].Author)
+                    @Html.DisplayNameFor(model => model.BookD.Books.FirstOrDefault().Author)
                 </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].Publisher)
+                @Html.DisplayNameFor(model => model.BookD.Books.FirstOrDefault().Publisher)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].BookCategories)
+                @Html.DisplayNameFor(model => model.BookD.Books.FirstOrDefault().BookCategories)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Book) {
+@foreach (var item in Model.BookD.Books) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
@@ -69,9 +69,9 @@
                     @Html.DisplayFor(modelItem => item.Publisher.PublisherName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

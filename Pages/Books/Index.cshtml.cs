@@ -23,6 +23,8 @@ namespace Costea_Miriam_Lab2.Pages.Books
         public int BookID { get; set; }
         public int CategoryID { get; set; }
         public string CurrentFilter { get; set; }
+        public string TitleSort { get; set; }
+        public string AuthorSort { get; set; }
 
         public class BookData
         {

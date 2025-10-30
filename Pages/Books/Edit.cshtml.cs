@@ -30,7 +30,7 @@ namespace Costea_Miriam_Lab2.Pages.Books
                 return NotFound();
             }
 
-            var book =  await _context.Book.FirstOrDefaultAsync(m => m.Id == id);
+            var book =  await _context.Book.FirstOrDefaultAsync(m => m.ID == id);
             if (book == null)
             {
                 return NotFound();
@@ -58,7 +58,7 @@ namespace Costea_Miriam_Lab2.Pages.Books
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!BookExists(Book.Id))
+                if (!BookExists(Book.ID))
                 {
                     return NotFound();
                 }
@@ -73,7 +73,7 @@ namespace Costea_Miriam_Lab2.Pages.Books
 
         private bool BookExists(int id)
         {
-            return _context.Book.Any(e => e.Id == id);
+            return _context.Book.Any(e => e.ID == id);
         }
     }
 }
