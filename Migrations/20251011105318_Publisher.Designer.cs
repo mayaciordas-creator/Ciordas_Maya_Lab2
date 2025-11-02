@@ -40,7 +40,7 @@ namespace Ciordas_Maya_Lab2.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(6, 2)");
 
-                    b.Property<int?>("PublisherID")
+                    b.Property<int>("PublisherID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("PublishingDate")

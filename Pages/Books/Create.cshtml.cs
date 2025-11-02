@@ -18,29 +18,67 @@ namespace Ciordas_Maya_Lab2.Pages.Books
         {
             _context = context;
         }
+ 
 
-        public IActionResult OnGet()
-        {
-            ViewData["AuthorID"] = new SelectList(_context.Author, "ID", "LastName");
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
-            return Page();
-        }
-
-        [BindProperty]
-        public Book Book { get; set; } = default!;
-
-        // For more information, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (!ModelState.IsValid)
+            public IActionResult OnGet()
             {
+                ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
+                ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID", "LastName");
+
+                var book = new Book();
+                book.BookCategories = new List<BookCategory>();
+            PopulateAssignedCategoryData(_context, book);
+
                 return Page();
             }
 
-            _context.Book.Add(Book);
-            await _context.SaveChangesAsync();
+        private void PopulateAssignedCategoryData(Ciordas_Maya_Lab2Context context, Book book)
+        {
+            throw new NotImplementedException();
+        }
 
-            return RedirectToPage("./Index");
+        [BindProperty]
+            public Book Book { get; set; } = default!;
+
+            // For more information, see https://aka.ms/RazorPagesCRUD.
+            public async Task<IActionResult> OnPostAsync(string[] selectedCategories)
+            {
+                var newBook = new Book();
+                if (selectedCategories != null)
+                {
+                    newBook.BookCategories = new List<BookCategory>();
+                    foreach (var cat in selectedCategories)
+                    {
+                        var catToAdd = new BookCategory
+                        {
+                            CategoryID = int.Parse(cat)
+                        };
+                        newBook.BookCategories.Add(catToAdd);
+                    }
+                }
+
+                Book.BookCategories = newBook.BookCategories;
+                _context.Book.Add(Book);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+
+                if (!ModelState.IsValid)
+                {
+                    return Page();
+                }
+
+                _context.Book.Add(Book);
+                await _context.SaveChangesAsync();
+
+                return RedirectToPage("./Index");
+            }
+        }
+
+        // Add this class to match the used type
+        public class AssignedCategoryData
+        {
+            public int CategoryID { get; set; }
+            public string Name { get; set; }
+            public bool Assigned { get; set; }
         }
     }
-}

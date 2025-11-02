@@ -18,15 +18,35 @@ namespace Ciordas_Maya_Lab2.Pages.Books
         {
             _context = context;
         }
+        public IList<Book> Book { get; set; }
+        public BookData BookD { get; set; }
+        public int BookID { get; set; }
+        public int CategoryID { get; set; }
 
-        public IList<Book> Book { get;set; } = default!;
-
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(int? id, int? categoryID)
         {
-            Book = await _context.Book
+            BookD = new BookData();
+
+            BookD.Books = await _context.Book
                 .Include(b => b.Publisher)
+                .Include(b => b.BookCategories).ThenInclude(b => b.Category)
+                .Include(b => b.Author)
+                .AsNoTracking()
+                .OrderBy(b => b.Title)
                 .ToListAsync();
+
+            if (id != null)
+            {
+                BookID = id.Value;
+                Book book = BookD.Books
+                .Where(i => i.Id == id.Value).Single();
+                BookD.Categories = book.BookCategories.Select(s => s.Category);
+            }
+
+
+            Book = await _context.Book
+        .Include(b => b.Publisher)
+        .ToListAsync();
         }
     }
 }
-

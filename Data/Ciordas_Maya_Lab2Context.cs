@@ -19,5 +19,6 @@ namespace Ciordas_Maya_Lab2.Data
         public DbSet<Ciordas_Maya_Lab2.Models.Book> Book { get; set; } = default!;
         public DbSet<Author> Author { get; set; }
         public DbSet<Ciordas_Maya_Lab2.Models.Publisher> Publisher { get; set; } = default!;
+        public DbSet<Ciordas_Maya_Lab2.Models.Category> Category { get; set; } = default!;
     }
 }
