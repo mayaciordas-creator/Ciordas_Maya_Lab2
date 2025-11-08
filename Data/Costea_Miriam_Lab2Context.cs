@@ -20,5 +20,7 @@ namespace Costea_Miriam_Lab2.Data
 
         public DbSet<Costea_Miriam_Lab2.Models.Category> Category { get; set; } = default!;
         public DbSet<Costea_Miriam_Lab2.Models.BookCategory> BookCategory { get; set; } = default!;
+        public DbSet<Costea_Miriam_Lab2.Models.Member> Member { get; set; } = default!;
+        public DbSet<Costea_Miriam_Lab2.Models.Borrowing> Borrowing { get; set; } = default!;
     }
 }
