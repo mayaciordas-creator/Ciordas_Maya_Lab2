@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Costea_Miriam_Lab2.Data;
-using Costea_Miriam_Lab2.Models;
+using Ciordas_Maya_Lab2.Data;
+using Ciordas_Maya_Lab2.Models;
 
-namespace Costea_Miriam_Lab2.Pages.Borrowings
+namespace Ciordas_Maya_Lab2.Pages.Borrowings
 {
     public class DetailsModel : PageModel
     {
-        private readonly Costea_Miriam_Lab2.Data.Costea_Miriam_Lab2Context _context;
+        private readonly Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context _context;
 
-        public DetailsModel(Costea_Miriam_Lab2.Data.Costea_Miriam_Lab2Context context)
+        public DetailsModel(Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context context)
         {
             _context = context;
         }

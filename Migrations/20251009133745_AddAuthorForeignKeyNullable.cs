@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Costea_Miriam_Lab2.Migrations
+namespace Ciordas_Maya_Lab2.Migrations
 {
     /// <inheritdoc />
     public partial class AddAuthorForeignKeyNullable : Migration

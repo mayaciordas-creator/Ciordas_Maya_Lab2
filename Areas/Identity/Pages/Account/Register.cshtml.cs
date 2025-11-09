@@ -18,9 +18,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using Costea_Miriam_Lab2.Models;
+using Ciordas_Maya_Lab2.Models;
 
-namespace Costea_Miriam_Lab2.Areas.Identity.Pages.Account
+namespace Ciordas_Maya_Lab2.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
@@ -31,15 +31,15 @@ namespace Costea_Miriam_Lab2.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
-        private readonly Costea_Miriam_Lab2.Data.
-            Costea_Miriam_Lab2Context _context;
+        private readonly Ciordas_Maya_Lab2.Data.
+            Ciordas_Maya_Lab2Context _context;
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            Data.Costea_Miriam_Lab2Context context)
+            Data.Ciordas_Maya_Lab2Context context)
         {
             _userManager = userManager;
             _userStore = userStore;

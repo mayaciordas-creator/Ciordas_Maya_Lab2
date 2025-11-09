@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Costea_Miriam_Lab2.Data;
-using Costea_Miriam_Lab2.Models;
+using Ciordas_Maya_Lab2.Data;
+using Ciordas_Maya_Lab2.Models;
 
-namespace Costea_Miriam_Lab2.Pages.Members
+namespace Ciordas_Maya_Lab2.Pages.Members
 {
     public class CreateModel : PageModel
     {
-        private readonly Costea_Miriam_Lab2.Data.Costea_Miriam_Lab2Context _context;
+        private readonly Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context _context;
 
-        public CreateModel(Costea_Miriam_Lab2.Data.Costea_Miriam_Lab2Context context)
+        public CreateModel(Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context context)
         {
             _context = context;
         }

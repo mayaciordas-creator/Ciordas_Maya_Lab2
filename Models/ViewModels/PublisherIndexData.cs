@@ -1,4 +1,4 @@
-﻿namespace Costea_Miriam_Lab2.Models.ViewModels
+﻿namespace Ciordas_Maya_Lab2.Models.ViewModels
 {
     public class PublisherIndexData
     {

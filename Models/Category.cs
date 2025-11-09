@@ -1,4 +1,4 @@
-﻿namespace Costea_Miriam_Lab2.Models
+﻿namespace Ciordas_Maya_Lab2.Models
 {
     public class Category
     {

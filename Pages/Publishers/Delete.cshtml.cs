@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Costea_Miriam_Lab2.Data;
-using Costea_Miriam_Lab2.Models;
+using Ciordas_Maya_Lab2.Data;
+using Ciordas_Maya_Lab2.Models;
 
-namespace Costea_Miriam_Lab2.Pages.Publishers
+namespace Ciordas_Maya_Lab2.Pages.Publishers
 {
     public class DeleteModel : PageModel
     {
-        private readonly Costea_Miriam_Lab2.Data.Costea_Miriam_Lab2Context _context;
+        private readonly Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context _context;
 
-        public DeleteModel(Costea_Miriam_Lab2.Data.Costea_Miriam_Lab2Context context)
+        public DeleteModel(Ciordas_Maya_Lab2.Data.Ciordas_Maya_Lab2Context context)
         {
             _context = context;
         }
