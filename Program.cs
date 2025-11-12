@@ -4,8 +4,22 @@ using Lese_Ioana_Lab2.Data;
 using Microsoft.AspNetCore.Identity;
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy =>
+         policy.RequireRole("Admin"));
+});
+
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizeFolder("/Books");
+    options.Conventions.AllowAnonymousToPage("/Books/Index");
+    options.Conventions.AllowAnonymousToPage("/Books/Details");
+
+    options.Conventions.AuthorizeFolder("/Members", "AdminPolicy");
+    options.Conventions.AuthorizeFolder("/Publishers", "AdminPolicy");
+    options.Conventions.AuthorizeFolder("/Categories", "AdminPolicy");
+});
 builder.Services.AddDbContext<Lese_Ioana_Lab2Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Lese_Ioana_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Lese_Ioana_Lab2Context' not found.")));
 
@@ -13,19 +27,20 @@ builder.Services.AddDbContext<LibraryIdentityContext>(options =>
        options.UseSqlServer(builder.Configuration.GetConnectionString("Lese_Ioana_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Lese_Ioana_Lab2Context' not found.")));
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 {
-    options.SignIn.RequireConfirmedAccount = false;  // ← dezactivează confirmarea prin email
+    options.SignIn.RequireConfirmedAccount = false; 
     options.Password.RequireDigit = false;
     options.Password.RequireLowercase = false;
     options.Password.RequireUppercase = false;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequiredLength = 3;
 })
+.AddRoles<IdentityRole>()
 .AddEntityFrameworkStores<LibraryIdentityContext>();
 
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
