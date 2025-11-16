@@ -1,5 +1,5 @@
-﻿using Lese_Ioana_Lab2.Data;
-using Lese_Ioana_Lab2.Models;
+﻿using Maya_Ciordas_Lab2.Data;
+using Maya_Ciordas_Lab2.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,14 +10,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lese_Ioana_Lab2.Pages.Books
+namespace Maya_Ciordas_Lab2.Pages.Books
 {
     [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
     {
-        private readonly Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context _context;
+        private readonly Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context _context;
 
-        public EditModel(Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context context)
+        public EditModel(Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context context)
         {
             _context = context;
         }

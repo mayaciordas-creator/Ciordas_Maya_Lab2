@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 
-namespace Lese_Ioana_Lab2.Areas.Identity.Pages.Account
+namespace Maya_Ciordas_Lab2.Areas.Identity.Pages.Account
 {
     public class LoginWith2faModel : PageModel
     {

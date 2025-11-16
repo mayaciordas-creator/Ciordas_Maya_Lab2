@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Lese_Ioana_Lab2.Data;
+using Maya_Ciordas_Lab2.Data;
 using Microsoft.AspNetCore.Identity;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,11 +20,11 @@ builder.Services.AddRazorPages(options =>
     options.Conventions.AuthorizeFolder("/Publishers", "AdminPolicy");
     options.Conventions.AuthorizeFolder("/Categories", "AdminPolicy");
 });
-builder.Services.AddDbContext<Lese_Ioana_Lab2Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Lese_Ioana_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Lese_Ioana_Lab2Context' not found.")));
+builder.Services.AddDbContext<Maya_Ciordas_Lab2Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Maya_Ciordas_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Maya_Ciordas_Lab2Context' not found.")));
 
 builder.Services.AddDbContext<LibraryIdentityContext>(options =>
-       options.UseSqlServer(builder.Configuration.GetConnectionString("Lese_Ioana_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Lese_Ioana_Lab2Context' not found.")));
+       options.UseSqlServer(builder.Configuration.GetConnectionString("Maya_Ciordas_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Maya_Ciordas_Lab2Context' not found.")));
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false; 

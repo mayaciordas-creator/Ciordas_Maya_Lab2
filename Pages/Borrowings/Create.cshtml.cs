@@ -1,5 +1,5 @@
-﻿using Lese_Ioana_Lab2.Data;
-using Lese_Ioana_Lab2.Models;
+﻿using Maya_Ciordas_Lab2.Data;
+using Maya_Ciordas_Lab2.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,13 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lese_Ioana_Lab2.Pages.Borrowings
+namespace Maya_Ciordas_Lab2.Pages.Borrowings
 {
     public class CreateModel : PageModel
     {
-        private readonly Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context _context;
+        private readonly Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context _context;
 
-        public CreateModel(Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context context)
+        public CreateModel(Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context context)
         {
             _context = context;
         }

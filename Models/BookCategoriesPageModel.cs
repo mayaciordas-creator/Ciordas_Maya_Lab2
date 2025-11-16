@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Lese_Ioana_Lab2.Data;
+using Maya_Ciordas_Lab2.Data;
 
 
-namespace Lese_Ioana_Lab2.Models
+namespace Maya_Ciordas_Lab2.Models
 {
     public class BookCategoriesPageModel:PageModel
     {
         public List<AssignedCategoryData> AssignedCategoryDataList;
-        public void PopulateAssignedCategoryData(Lese_Ioana_Lab2Context context,
+        public void PopulateAssignedCategoryData(Maya_Ciordas_Lab2Context context,
         Book book)
         {
             var allCategories = context.Category;
@@ -24,7 +24,7 @@ namespace Lese_Ioana_Lab2.Models
                 });
             }
         }
-        public void UpdateBookCategories(Lese_Ioana_Lab2Context context,
+        public void UpdateBookCategories(Maya_Ciordas_Lab2Context context,
         string[] selectedCategories, Book bookToUpdate)
         {
             if (selectedCategories == null)

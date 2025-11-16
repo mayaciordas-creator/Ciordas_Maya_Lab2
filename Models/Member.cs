@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Lese_Ioana_Lab2.Models
+namespace Maya_Ciordas_Lab2.Models
 {
     public class Member
     {

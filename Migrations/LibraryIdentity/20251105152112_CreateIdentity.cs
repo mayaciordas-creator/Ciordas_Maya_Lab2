@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Lese_Ioana_Lab2.Migrations.LibraryIdentity
+namespace Maya_Ciordas_Lab2.Migrations.LibraryIdentity
 {
     /// <inheritdoc />
     public partial class CreateIdentity : Migration

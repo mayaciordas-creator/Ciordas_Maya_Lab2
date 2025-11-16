@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Lese_Ioana_Lab2.Migrations
+namespace Maya_Ciordas_Lab2.Migrations
 {
     /// <inheritdoc />
     public partial class CreateAuthorTable : Migration

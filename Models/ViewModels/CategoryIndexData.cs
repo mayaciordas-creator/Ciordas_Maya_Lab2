@@ -1,4 +1,4 @@
-﻿namespace Lese_Ioana_Lab2.Models.ViewModels
+﻿namespace Maya_Ciordas_Lab2.Models.ViewModels
 {
     public class CategoryIndexData
     {

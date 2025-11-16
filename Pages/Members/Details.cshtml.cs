@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Lese_Ioana_Lab2.Data;
-using Lese_Ioana_Lab2.Models;
+using Maya_Ciordas_Lab2.Data;
+using Maya_Ciordas_Lab2.Models;
 
-namespace Lese_Ioana_Lab2.Pages.Members
+namespace Maya_Ciordas_Lab2.Pages.Members
 {
     public class DetailsModel : PageModel
     {
-        private readonly Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context _context;
+        private readonly Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context _context;
 
-        public DetailsModel(Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context context)
+        public DetailsModel(Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context context)
         {
             _context = context;
         }

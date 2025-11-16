@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Lese_Ioana_Lab2.Data;
+namespace Maya_Ciordas_Lab2.Data;
 
 public class LibraryIdentityContext : IdentityDbContext<IdentityUser>
 {

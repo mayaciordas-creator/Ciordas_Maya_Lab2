@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using Lese_Ioana_Lab2.Models;
+using Maya_Ciordas_Lab2.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -21,7 +21,7 @@ using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Lese_Ioana_Lab2.Areas.Identity.Pages.Account
+namespace Maya_Ciordas_Lab2.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
@@ -32,7 +32,7 @@ namespace Lese_Ioana_Lab2.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
-        private readonly Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context
+        private readonly Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context
         _context;
 
         public RegisterModel(
@@ -41,7 +41,7 @@ namespace Lese_Ioana_Lab2.Areas.Identity.Pages.Account
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context context)
+            Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context context)
         {
             _userManager = userManager;
             _userStore = userStore;

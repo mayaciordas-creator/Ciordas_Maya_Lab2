@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Lese_Ioana_Lab2.Pages
+namespace Maya_Ciordas_Lab2.Pages
 {
     public class PrivacyModel : PageModel
     {

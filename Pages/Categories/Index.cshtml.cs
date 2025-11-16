@@ -1,6 +1,6 @@
-﻿using Lese_Ioana_Lab2.Data;
-using Lese_Ioana_Lab2.Models;
-using Lese_Ioana_Lab2.Models.ViewModels;
+﻿using Maya_Ciordas_Lab2.Data;
+using Maya_Ciordas_Lab2.Models;
+using Maya_Ciordas_Lab2.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -9,13 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lese_Ioana_Lab2.Pages.Categories
+namespace Maya_Ciordas_Lab2.Pages.Categories
 {
     public class IndexModel : PageModel
     {
-        private readonly Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context _context;
+        private readonly Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context _context;
 
-        public IndexModel(Lese_Ioana_Lab2.Data.Lese_Ioana_Lab2Context context)
+        public IndexModel(Maya_Ciordas_Lab2.Data.Maya_Ciordas_Lab2Context context)
         {
             _context = context;
         }
